@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on 小帅的技术小黑屋</title>
+    <link>https://xxsvip.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on 小帅的技术小黑屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 06 Apr 2020 11:43:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://xxsvip.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo搭建</title>
+      <link>https://xxsvip.github.io/post/hugo/</link>
+      <pubDate>Mon, 06 Apr 2020 11:43:05 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/post/hugo/</guid>
+      <description> hugo官网地址为：hugo
+当前主题为：m10c
+m10c主题相关：  修改avatar，在网站的static目录下放置avatar.jpg来替换默认的avatar。 可用icon图标在此：图标  每次提交步骤：  在项目根目录执行 hugo （会将修改内容生成pubic目录） cd public git commit -am &amp;lsquo;xxx&amp;rsquo; git push (设置的远程git名称为hugo)  </description>
+    </item>
+    
+  </channel>
+</rss>
