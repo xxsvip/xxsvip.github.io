@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 小帅的技术小黑屋</title>
-    <link>https://xxsvip.github.io/post/</link>
-    <description>Recent content in Posts on 小帅的技术小黑屋</description>
+    <title>vue入门 on 小帅的技术小黑屋</title>
+    <link>https://xxsvip.github.io/tags/vue%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in vue入门 on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 07 Apr 2020 16:41:58 +0800</lastBuildDate>
     
-	<atom:link href="https://xxsvip.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xxsvip.github.io/tags/vue%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
 vue特点：  更加轻量 20kb 渐进式框架（不需要学习完vue的所有知识便可以应用到系统中） 响应式的更新机制 学习成本低  vue指令 v-bind v-bind:id = &amp;quot;message&amp;quot;  此时id属性会根据后台message数据的值动态变换。上面指令可以简写为：
 :id = &amp;quot;message&amp;quot;  v-if v-else v-show v-for  组件注册与使用 组件注册 注册组件时必须在new Vue之前。
 Vue.component(&amp;quot;todo-item&amp;quot;,{ template: `&amp;lt;li&amp;gt; &amp;lt;span v-if=&amp;quot;!del&amp;quot;&amp;gt;{{title}}&amp;lt;/span&amp;gt; &amp;lt;span v-else style=&amp;quot;text-decoration:line-through&amp;quot;&amp;gt;{{title}}&amp;lt;/span&amp;gt; &amp;lt;button v-show=&amp;quot;!del&amp;quot;&amp;gt;删除&amp;lt;/button&amp;gt; &amp;lt;/li&amp;gt;`, props: { title: String, del: { type: Boolean, default: false } }, data: function(){ return {} }, methods: { } });	 组件使用 &amp;lt;todo-item v-for=&amp;quot;item in items&amp;quot; :title=&amp;quot;item.title&amp;quot; :del=&amp;quot;item.del&amp;quot; /&amp;gt;  组件注册2 Vue.</description>
-    </item>
-    
-    <item>
-      <title>Hugo搭建个人博客</title>
-      <link>https://xxsvip.github.io/post/hugo/</link>
-      <pubDate>Mon, 06 Apr 2020 11:43:05 +0800</pubDate>
-      
-      <guid>https://xxsvip.github.io/post/hugo/</guid>
-      <description> hugo官网地址为：hugo
-当前主题为：m10c
-m10c主题相关：  修改avatar，在网站的static目录下放置avatar.jpg来替换默认的avatar。 可用icon图标在此：图标  每次提交步骤：  在项目根目录执行 hugo （会将修改内容生成pubic目录） cd public git commit -am &amp;lsquo;xxx&amp;rsquo; git push  </description>
     </item>
     
   </channel>

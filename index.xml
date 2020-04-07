@@ -5,10 +5,22 @@
     <link>https://xxsvip.github.io/</link>
     <description>Recent content on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 06 Apr 2020 11:43:05 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Apr 2020 16:41:58 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue入门</title>
+      <link>https://xxsvip.github.io/post/vue%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Tue, 07 Apr 2020 16:41:58 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/post/vue%E5%85%A5%E9%97%A8/</guid>
+      <description>vue、angular、react要解决的问题是：数据驱动，避免手动的操作DOM。
+vue特点：  更加轻量 20kb 渐进式框架（不需要学习完vue的所有知识便可以应用到系统中） 响应式的更新机制 学习成本低  vue指令 v-bind v-bind:id = &amp;quot;message&amp;quot;  此时id属性会根据后台message数据的值动态变换。上面指令可以简写为：
+:id = &amp;quot;message&amp;quot;  v-if v-else v-show v-for  组件注册与使用 组件注册 注册组件时必须在new Vue之前。
+Vue.component(&amp;quot;todo-item&amp;quot;,{ template: `&amp;lt;li&amp;gt; &amp;lt;span v-if=&amp;quot;!del&amp;quot;&amp;gt;{{title}}&amp;lt;/span&amp;gt; &amp;lt;span v-else style=&amp;quot;text-decoration:line-through&amp;quot;&amp;gt;{{title}}&amp;lt;/span&amp;gt; &amp;lt;button v-show=&amp;quot;!del&amp;quot;&amp;gt;删除&amp;lt;/button&amp;gt; &amp;lt;/li&amp;gt;`, props: { title: String, del: { type: Boolean, default: false } }, data: function(){ return {} }, methods: { } });	 组件使用 &amp;lt;todo-item v-for=&amp;quot;item in items&amp;quot; :title=&amp;quot;item.title&amp;quot; :del=&amp;quot;item.del&amp;quot; /&amp;gt;  组件注册2 Vue.</description>
+    </item>
     
     <item>
       <title>Hugo搭建个人博客</title>
