@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vuex on 小帅的技术小黑屋</title>
+    <link>https://xxsvip.github.io/tags/vuex/</link>
+    <description>Recent content in Vuex on 小帅的技术小黑屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 08 Apr 2020 14:59:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://xxsvip.github.io/tags/vuex/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>VueX</title>
+      <link>https://xxsvip.github.io/post/vuex/</link>
+      <pubDate>Wed, 08 Apr 2020 14:59:48 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/post/vuex/</guid>
+      <description> 安装vuex：
+vue i vuex  Vuex就是前端为了方便数据的操作而建立的一个“前端数据库”。
+state State就是数据库。 state(vuex)约等于data(vue)
+state一般被挂载到子组件的computed计算属性上，有利于state的值发生改变时及时响应给子组件。
+mutations Mutations就是我们进行数据库操作的API，用来修改state。
+mutations必须是同步函数。
+actions Actions函数接收一个context参数。context与store实例有着相同的方法和属性。所以可以使用context.commit来提交一个mutation，或者可以通过context.state和context.getters来获取state和getters。
+mutation通过store.commit触发，action通过store.dispatch来触发。
+getters 类似于computed
+核心概念  State&amp;mdash;-this.$store.state.xxx 取值 getter&amp;mdash;-this.$store.getters.xxx 取值 mutation&amp;mdash;-this.$store.commit(&amp;ldquo;xxx&amp;rdquo;) 赋值 action&amp;mdash;-this.$store.dispatch(&amp;ldquo;xxx&amp;rdquo;) 赋值  </description>
+    </item>
+    
+  </channel>
+</rss>
