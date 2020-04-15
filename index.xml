@@ -5,10 +5,38 @@
     <link>https://xxsvip.github.io/</link>
     <description>Recent content on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 07 Apr 2020 16:41:58 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 17:07:07 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DevTools热部署</title>
+      <link>https://xxsvip.github.io/springboot/devtools%E7%83%AD%E9%83%A8%E7%BD%B2/</link>
+      <pubDate>Wed, 15 Apr 2020 17:07:07 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/springboot/devtools%E7%83%AD%E9%83%A8%E7%BD%B2/</guid>
+      <description>1.pom文件引入依赖： &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-devtools&amp;lt;/artifactId&amp;gt; &amp;lt;scope&amp;gt;true&amp;lt;/scope&amp;gt; &amp;lt;optional&amp;gt;true&amp;lt;/optional&amp;gt; &amp;lt;/dependency&amp;gt;  2.pom插件设置： &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;configuration&amp;gt; &amp;lt;fork&amp;gt;true&amp;lt;/fork&amp;gt; &amp;lt;/configuration&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;  3.idea设置 到设置中 build,Execution,Deployment=&amp;gt;Compiler=&amp;gt;Build project automatically勾选上。
+4.registry设置 cmd+shift+alt+/ 选择registry，将 compiler.automake.allow.when.app.running勾选上。</description>
+    </item>
+    
+    <item>
+      <title>VueX</title>
+      <link>https://xxsvip.github.io/post/vuex/</link>
+      <pubDate>Wed, 08 Apr 2020 14:59:48 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/post/vuex/</guid>
+      <description> 安装vuex：
+vue i vuex  Vuex就是前端为了方便数据的操作而建立的一个“前端数据库”。
+state State就是数据库。 state(vuex)约等于data(vue)
+state一般被挂载到子组件的computed计算属性上，有利于state的值发生改变时及时响应给子组件。
+mutations Mutations就是我们进行数据库操作的API，用来修改state。
+mutations必须是同步函数。
+actions Actions函数接收一个context参数。context与store实例有着相同的方法和属性。所以可以使用context.commit来提交一个mutation，或者可以通过context.state和context.getters来获取state和getters。
+mutation通过store.commit触发，action通过store.dispatch来触发。
+getters 类似于computed
+核心概念  State&amp;mdash;-this.$store.state.xxx 取值 getter&amp;mdash;-this.$store.getters.xxx 取值 mutation&amp;mdash;-this.$store.commit(&amp;ldquo;xxx&amp;rdquo;) 赋值 action&amp;mdash;-this.$store.dispatch(&amp;ldquo;xxx&amp;rdquo;) 赋值  </description>
+    </item>
     
     <item>
       <title>Vue入门</title>

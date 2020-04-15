@@ -216,6 +216,23 @@ Vue.component(&quot;todo-item&quot;,{ template: `&lt;li&gt; &lt;span v-if=&quot;
 &lt;/template&gt;
 </code></pre>
 
+<h3 id="vue-component缺点">Vue.Component缺点</h3>
+
+<ol>
+<li>全局定义：强制要求每个component中的命名不得重复</li>
+<li>字符串模版：缺乏语法高亮，在HTML有多行的时候，需要用到丑陋的<br /></li>
+<li>不支持css：意味着当HTML和javascript组件化时，CSS明显被遗漏</li>
+<li>没有构建步骤：限制只能使用HTML和ES5 Javascript，而不能使用预处理器，如Babel。</li>
+</ol>
+
+<h3 id="单文件组件代替vue-component">单文件组件代替Vue.Component</h3>
+
+<pre><code>npm install -g @vue/cli (可能安装失败，可按照：sudo npm install -g @vue/cli --unsafe-perm)
+vue create hello-world
+cd hello-world
+npm run serve
+</code></pre>
+
     </div>
     <div class="post-footer">
       
