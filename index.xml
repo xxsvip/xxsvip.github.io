@@ -5,10 +5,22 @@
     <link>https://xxsvip.github.io/</link>
     <description>Recent content on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 17 Apr 2020 10:19:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2020 21:25:27 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Redis</title>
+      <link>https://xxsvip.github.io/docker/redis/</link>
+      <pubDate>Mon, 20 Apr 2020 21:25:27 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/docker/redis/</guid>
+      <description>docker run -p 6379:6379 --name redis \ -v /Users/xingxiaoshuai/software/docker/redis:/data \ -v /Users/xingxiaoshuai/software/docker/redis/conf/redis.conf:/etc/redis/redis.conf \ -d redis redis-server /etc/redis/redis.conf  注意：上面的redis.conf文件要先创建了，否则会认为是一个目录
+docker exec -it redis redis-cli  直接运行上面命令操作redis
+默认redis是将数据存储在内存中的，在redis.conf文件中输入：
+appendonly yes  这样会在redis目录下生成appendonly.aof文件，重启redis数据不会丢失。</description>
+    </item>
     
     <item>
       <title>Modbus</title>
