@@ -22,11 +22,11 @@
     </item>
     
     <item>
-      <title>Virtualbox vagrant</title>
-      <link>https://xxsvip.github.io/linux/virtualbox#vagrant/</link>
+      <title>vagrant</title>
+      <link>https://xxsvip.github.io/linux/vagrant/</link>
       <pubDate>Thu, 16 Apr 2020 15:02:30 +0800</pubDate>
       
-      <guid>https://xxsvip.github.io/linux/virtualbox#vagrant/</guid>
+      <guid>https://xxsvip.github.io/linux/vagrant/</guid>
       <description>各种虚拟机尝试了不少，免费的暂时发现只有virtualbox，而且virtualbox还支持vagrant。
  安装virtualbox和vagrant。vagrant安装完成后在mac没有图标。可以通过vagrant -v来查看安装是否成功。 下载vagrant官方封装好的系统镜像。地址:http://www.vagrantbox.es/ 选择自己要下载的box。 vagrant box add 自己给box的命名 本地box路径。 vagrant init 自己给box的命名 （此时对应文件夹会生成Vagrantfile文件） vagrant up 启动服务器，此时在virtualbox中会出现服务器。 此时服务器的root账号默认密码为vagrant。 切换到vagrantfile目录运行vagrant ssh命令连接上虚拟机  安装完成后以后使用只需要切换到对应目录，执行 vagrant up,然后执行vagrant ssh即可。</description>
     </item>
