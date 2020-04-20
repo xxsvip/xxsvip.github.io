@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iots on 小帅的技术小黑屋</title>
+    <link>https://xxsvip.github.io/iot/</link>
+    <description>Recent content in Iots on 小帅的技术小黑屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Apr 2020 10:19:26 +0800</lastBuildDate>
+    
+	<atom:link href="https://xxsvip.github.io/iot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modbus</title>
+      <link>https://xxsvip.github.io/iot/modbus/</link>
+      <pubDate>Fri, 17 Apr 2020 10:19:26 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/iot/modbus/</guid>
+      <description>数据模型 PLC地址 数据类型 读写方式 备注     Discretes Input寄存器1：离散输入 10001-19999 single bit read only This type of data can be provided by an I/O system.   Coils
+寄存器0:线圈 00001-09999 single bit read-write this type of data can be alterable by an application program   Input Registers
+寄存器3:输入寄存器 30001-39999 16bit word readonly this type of data can be provided by an I/O system.   Holding Registers</description>
+    </item>
+    
+  </channel>
+</rss>
