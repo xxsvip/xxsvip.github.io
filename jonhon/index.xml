@@ -17,6 +17,7 @@
       
       <guid>https://xxsvip.github.io/jonhon/%E9%85%8D%E5%A5%97/</guid>
       <description>配套是针对工作订单进行的操作。
+工作订单可能会拆分为多个车间订单。
 配套在哪个系统进行，车间订单就在哪个系统生成。
 目前38999车间想通过在MES中进行配套，所以接收的是ERP的工作订单，制造十部按原来的方式，在ERP中进行配套，所以接收的是ERP的车间订单。</description>
     </item>
