@@ -17,7 +17,7 @@
       
       <guid>https://xxsvip.github.io/dev/chrome%E7%AB%AF%E5%8F%A3/</guid>
       <description>昨天运行项目，把端口设置为6666，访问时提示：
-网址为 http://localhost:6666/ 的网页可能暂时无法连接，或者它已永久性地移动到了新网址。 ERR_UNSAFE_PORT  chrome默认有一些非安全端口，看最大的为6669，所以以后尽量使用7000及以后的端口。</description>
+网址为 http://localhost:6666/ 的网页可能暂时无法连接，或者它已永久性地移动到了新网址。 ERR_UNSAFE_PORT  chrome默认有一些非安全端口，看最大的为6669（整数的还有6000也是非安全端口），所以以后尽量使用7000及以后的端口。</description>
     </item>
     
     <item>
