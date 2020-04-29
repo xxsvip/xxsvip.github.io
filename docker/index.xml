@@ -5,10 +5,22 @@
     <link>https://xxsvip.github.io/docker/</link>
     <description>Recent content in Dockers on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Apr 2020 21:25:27 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 Apr 2020 11:48:05 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mysql</title>
+      <link>https://xxsvip.github.io/docker/mysql/</link>
+      <pubDate>Sun, 26 Apr 2020 11:48:05 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/docker/mysql/</guid>
+      <description>需要创建my.cnf文件，否则会以文件夹的形式创建，并在其中添加如下内容：
+[mysqld] user=mysql character-set-server=utf8 default_authentication_plugin=mysql_native_password secure_file_priv=/var/lib/mysql expire_logs_days=7 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION max_connections=1000 [client] default-character-set=utf8 [mysql] default-character-set=utf8  创建容器：
+docker run -p 3306:3306 --name mysql --restart=always --privileged=true \ -v /Users/xingxiaoshuai/software/docker/mysql/log:/var/log/mysql \ -v /Users/xingxiaoshuai/software/docker/mysql/data:/var/lib/mysql \ -v /Users/xingxiaoshuai/software/docker/mysql/conf.d:/etc/mysql/cong.d \ -v /Users/xingxiaoshuai/software/docker/mysql/my.cnf:/etc/mysql/my.cnf \ -e MYSQL_ROOT_PASSWORD=root \ -d mysql  注意：启动mysql报如下错误，那是因为MYSQL新特性secure_file_priv对读写文件的影响。
+修改my.cnf 在[mysqld]内加入secure_file_priv=/var/lib/mysql  </description>
+    </item>
     
     <item>
       <title>Redis</title>

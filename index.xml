@@ -5,10 +5,50 @@
     <link>https://xxsvip.github.io/</link>
     <description>Recent content on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 24 Apr 2020 08:04:47 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 10:20:39 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chrome端口</title>
+      <link>https://xxsvip.github.io/dev/chrome%E7%AB%AF%E5%8F%A3/</link>
+      <pubDate>Wed, 29 Apr 2020 10:20:39 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/dev/chrome%E7%AB%AF%E5%8F%A3/</guid>
+      <description>昨天运行项目，把端口设置为6666，访问时提示：
+网址为 http://localhost:6666/ 的网页可能暂时无法连接，或者它已永久性地移动到了新网址。 ERR_UNSAFE_PORT  chrome默认有一些非安全端口，看最大的为6669，所以以后尽量使用7000及以后的端口。</description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>https://xxsvip.github.io/docker/mysql/</link>
+      <pubDate>Sun, 26 Apr 2020 11:48:05 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/docker/mysql/</guid>
+      <description>需要创建my.cnf文件，否则会以文件夹的形式创建，并在其中添加如下内容：
+[mysqld] user=mysql character-set-server=utf8 default_authentication_plugin=mysql_native_password secure_file_priv=/var/lib/mysql expire_logs_days=7 sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION max_connections=1000 [client] default-character-set=utf8 [mysql] default-character-set=utf8  创建容器：
+docker run -p 3306:3306 --name mysql --restart=always --privileged=true \ -v /Users/xingxiaoshuai/software/docker/mysql/log:/var/log/mysql \ -v /Users/xingxiaoshuai/software/docker/mysql/data:/var/lib/mysql \ -v /Users/xingxiaoshuai/software/docker/mysql/conf.d:/etc/mysql/cong.d \ -v /Users/xingxiaoshuai/software/docker/mysql/my.cnf:/etc/mysql/my.cnf \ -e MYSQL_ROOT_PASSWORD=root \ -d mysql  注意：启动mysql报如下错误，那是因为MYSQL新特性secure_file_priv对读写文件的影响。
+修改my.cnf 在[mysqld]内加入secure_file_priv=/var/lib/mysql  </description>
+    </item>
+    
+    <item>
+      <title>连接器</title>
+      <link>https://xxsvip.github.io/jonhon/%E8%BF%9E%E6%8E%A5%E5%99%A8/</link>
+      <pubDate>Sat, 25 Apr 2020 09:48:29 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/jonhon/%E8%BF%9E%E6%8E%A5%E5%99%A8/</guid>
+      <description>插座：通常是两件式多接触件连接器上固定的或不动的那一半，也指通常安装在面板上并带有插孔的那一半连接器。
+插孔：一种阴性接触件，能和阳性接触件插合，一般接在电路的带电侧。
+插头（plug）：连接器的插合的两半之一，在未连接到另一半上时可自由活动，一般认为是连接器的阳性部分。
+插针：一种阳性接触件，通常与插孔插配，一般连接在电路不带电的一侧。
+接触电阻：装在连接器上的插针和插孔的最大允许电阻。
+接触件 插针插孔的电连接是靠插针插孔的弹性接触来实现的，插针插孔的结构形式决定了接触的可靠性。
+绞线式弹性插针（绞针） 由内层三根和外层七根弹性铜丝经过两次双向绞制而成。针与孔对接时外层的7根丝与插孔内壁形成7条螺旋线接触，保证了在各种环境条件下的接触可靠性。
+优点：可实现微型化 缺点：工艺复杂。
+线簧孔 插孔内有多根弹性丝，其接触原理与绞针式弹性插针相似；
+优点：插拔力小。缺点：容易断丝、工艺复杂、无法实现微型化</description>
+    </item>
     
     <item>
       <title>MES认识</title>
