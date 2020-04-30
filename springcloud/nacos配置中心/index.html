@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Nacos配置中心 // 小帅的技术小黑屋</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="smart man" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://xxsvip.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Nacos配置中心"/>
+<meta name="twitter:description" content="引入依赖：
+&lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt;  在resources目录下引入bootstrap.properties文件
+spring.application.name=integration-erp spring.cloud.nacos.config.server-addr=127.0.0.1:8848 spring.cloud.nacos.config.file-extension=yaml spring.cloud.nacos.config.namespace=1ff6e0ce-d998-4b76-8b37-be9a6967c44a spring.cloud.nacos.config.group=dev   bootstrap.properties文件中的配置会优先于application.properties文件中的配置先进行读取。
+ 在nacos的web端进行配置，Data ID为
+${prefix} - ${spring.profiles.active} . ${file-extension}   prefix默认为*spring.application.name*的值
+spring.profiles.active即为当前环境对应的profile。注意，当spring.profiles.active为空时，对应的连接符-也将不存在，dataId的拼接格式变成${prefix}.${file-extension}；
+file-extension为配置内容的数据格式，可以通过配置项spring.cloud.nacos.config.file-extension来配置。
+通常，每个模块创建创建一个命名空间namespace，根据不同的环境创建分组group。
+结合@Value注解和@RefreshScope动态改变参数值。"/>
+
+    <meta property="og:title" content="Nacos配置中心" />
+<meta property="og:description" content="引入依赖：
+&lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt; &lt;/dependency&gt;  在resources目录下引入bootstrap.properties文件
+spring.application.name=integration-erp spring.cloud.nacos.config.server-addr=127.0.0.1:8848 spring.cloud.nacos.config.file-extension=yaml spring.cloud.nacos.config.namespace=1ff6e0ce-d998-4b76-8b37-be9a6967c44a spring.cloud.nacos.config.group=dev   bootstrap.properties文件中的配置会优先于application.properties文件中的配置先进行读取。
+ 在nacos的web端进行配置，Data ID为
+${prefix} - ${spring.profiles.active} . ${file-extension}   prefix默认为*spring.application.name*的值
+spring.profiles.active即为当前环境对应的profile。注意，当spring.profiles.active为空时，对应的连接符-也将不存在，dataId的拼接格式变成${prefix}.${file-extension}；
+file-extension为配置内容的数据格式，可以通过配置项spring.cloud.nacos.config.file-extension来配置。
+通常，每个模块创建创建一个命名空间namespace，根据不同的环境创建分组group。
+结合@Value注解和@RefreshScope动态改变参数值。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxsvip.github.io/springcloud/nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/" />
+<meta property="article:published_time" content="2020-04-30T11:04:02+08:00" />
+<meta property="article:modified_time" content="2020-04-30T11:04:02+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://xxsvip.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="smart man" /></a>
+      <h1>小帅的技术小黑屋</h1>
+      <p>头发浓密｜睡眠良好｜情绪稳定｜财富自由</p>
+      <p><a href="/tags">标签</a></p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/xxsvip" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/ace_xingbenli" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Nacos配置中心</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Apr 30, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://xxsvip.github.io/tags/springcloud/">springcloud</a></div></div>
+    </header>
+    <div class="post-content">
+      <ul>
+<li><p>引入依赖：</p>
+
+<pre><code>&lt;dependency&gt;
+&lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt;
+&lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-config&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre></li>
+
+<li><p>在resources目录下引入bootstrap.properties文件</p>
+
+<pre><code>spring.application.name=integration-erp
+spring.cloud.nacos.config.server-addr=127.0.0.1:8848
+spring.cloud.nacos.config.file-extension=yaml
+
+spring.cloud.nacos.config.namespace=1ff6e0ce-d998-4b76-8b37-be9a6967c44a
+spring.cloud.nacos.config.group=dev
+</code></pre></li>
+</ul>
+
+<p>bootstrap.properties文件中的配置会优先于application.properties文件中的配置先进行读取。</p>
+
+<ul>
+<li><p>在nacos的web端进行配置，Data ID为</p>
+
+<pre><code>${prefix} - ${spring.profiles.active} . ${file-extension}
+</code></pre></li>
+</ul>
+
+<p>prefix默认为*spring.application.name*的值</p>
+
+<p><code>spring.profiles.active</code>即为当前环境对应的<code>profile</code>。<strong>注意，当<code>spring.profiles.active</code>为空时，对应的连接符<code>-</code>也将不存在，dataId的拼接格式变成<code>${prefix}.${file-extension}</code></strong>；</p>
+
+<p><code>file-extension</code>为配置内容的数据格式，可以通过配置项<code>spring.cloud.nacos.config.file-extension</code>来配置。</p>
+
+<p>通常，每个模块创建创建一个命名空间namespace，根据不同的环境创建分组group。</p>
+
+<p>结合@Value注解和@RefreshScope动态改变参数值。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

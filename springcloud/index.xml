@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Springclouds on 小帅的技术小黑屋</title>
+    <link>https://xxsvip.github.io/springcloud/</link>
+    <description>Recent content in Springclouds on 小帅的技术小黑屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Apr 2020 11:04:02 +0800</lastBuildDate>
+    
+	<atom:link href="https://xxsvip.github.io/springcloud/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nacos配置中心</title>
+      <link>https://xxsvip.github.io/springcloud/nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</link>
+      <pubDate>Thu, 30 Apr 2020 11:04:02 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/springcloud/nacos%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/</guid>
+      <description>引入依赖：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-alibaba-nacos-config&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  在resources目录下引入bootstrap.properties文件
+spring.application.name=integration-erp spring.cloud.nacos.config.server-addr=127.0.0.1:8848 spring.cloud.nacos.config.file-extension=yaml spring.cloud.nacos.config.namespace=1ff6e0ce-d998-4b76-8b37-be9a6967c44a spring.cloud.nacos.config.group=dev   bootstrap.properties文件中的配置会优先于application.properties文件中的配置先进行读取。
+ 在nacos的web端进行配置，Data ID为
+${prefix} - ${spring.profiles.active} . ${file-extension}   prefix默认为*spring.application.name*的值
+spring.profiles.active即为当前环境对应的profile。注意，当spring.profiles.active为空时，对应的连接符-也将不存在，dataId的拼接格式变成${prefix}.${file-extension}；
+file-extension为配置内容的数据格式，可以通过配置项spring.cloud.nacos.config.file-extension来配置。
+通常，每个模块创建创建一个命名空间namespace，根据不同的环境创建分组group。
+结合@Value注解和@RefreshScope动态改变参数值。</description>
+    </item>
+    
+    <item>
+      <title>Openfeign</title>
+      <link>https://xxsvip.github.io/springcloud/openfeign/</link>
+      <pubDate>Thu, 30 Apr 2020 09:51:38 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/springcloud/openfeign/</guid>
+      <description> 在调用方引入：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-openfeign&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  定义接口，并加上注解@FeignClient(&amp;ldquo;远程服务项目名称&amp;rdquo;)，将远程接口的方法声明放到接口中，路径名为全路径名。
+ 开启远程调用：在springboot启动类中加入注解@EnableFeignClients(basePackages=&amp;ldquo;feign接口定义的包名&amp;rdquo;)
+  </description>
+    </item>
+    
+    <item>
+      <title>Nacos注册中心</title>
+      <link>https://xxsvip.github.io/springcloud/nacos%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</link>
+      <pubDate>Thu, 30 Apr 2020 08:50:43 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/springcloud/nacos%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</guid>
+      <description> 引入dependencyManagement，后面引入Spring cloud alibaba相关的内容时不需要版本：
+ &amp;lt;dependencyManagement&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-alibaba-dependencies&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt; &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/dependencyManagement&amp;gt;   引入nacos discovery starter：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-alibaba-nacos-discovery&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  在application.properties中配置nacos server地址：
+spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848  在application.properties中配置nacos application name：
+spring.application.name=xxx  在springboot的启动类中添加注解：
+@EnableDiscoveryClient   Nacos Server  下载nacos server
+ 到bin目录下启动nacos：
+sh startup.sh -m standalone  访问路径为：
+127.0.0.1:8848/nacos  默认用户名密码都为 nacos
+  </description>
+    </item>
+    
+  </channel>
+</rss>
