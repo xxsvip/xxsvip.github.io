@@ -14,7 +14,7 @@
 <meta name="twitter:title" content="Nacos注册中心"/>
 <meta name="twitter:description" content=" 引入dependencyManagement，后面引入Spring cloud alibaba相关的内容时不需要版本：
  &lt;dependencyManagement&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-alibaba-dependencies&lt;/artifactId&gt; &lt;version&gt;2.1.0.RELEASE&lt;/version&gt; &lt;type&gt;pom&lt;/type&gt; &lt;scope&gt;import&lt;/scope&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/dependencyManagement&gt;   引入nacos discovery starter：
-&lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt;  在application.properties中配置nacos server地址：
+&lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt;  在application.properties中配置nacos server地址（还可以指定namespace）：
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848  在application.properties中配置nacos application name：
 spring.application.name=xxx  在springboot的启动类中添加注解：
 @EnableDiscoveryClient   Nacos Server  下载nacos server
@@ -26,7 +26,7 @@ sh startup.sh -m standalone  访问路径为：
     <meta property="og:title" content="Nacos注册中心" />
 <meta property="og:description" content=" 引入dependencyManagement，后面引入Spring cloud alibaba相关的内容时不需要版本：
  &lt;dependencyManagement&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-alibaba-dependencies&lt;/artifactId&gt; &lt;version&gt;2.1.0.RELEASE&lt;/version&gt; &lt;type&gt;pom&lt;/type&gt; &lt;scope&gt;import&lt;/scope&gt; &lt;/dependency&gt; &lt;/dependencies&gt; &lt;/dependencyManagement&gt;   引入nacos discovery starter：
-&lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt;  在application.properties中配置nacos server地址：
+&lt;dependency&gt; &lt;groupId&gt;com.alibaba.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-alibaba-nacos-discovery&lt;/artifactId&gt; &lt;/dependency&gt;  在application.properties中配置nacos server地址（还可以指定namespace）：
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848  在application.properties中配置nacos application name：
 spring.application.name=xxx  在springboot的启动类中添加注解：
 @EnableDiscoveryClient   Nacos Server  下载nacos server
@@ -114,7 +114,7 @@ sh startup.sh -m standalone  访问路径为：
 &lt;/dependency&gt;
 </code></pre></li>
 
-<li><p>在application.properties中配置nacos server地址：</p>
+<li><p>在application.properties中配置nacos server地址（还可以指定namespace）：</p>
 
 <pre><code>spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
 </code></pre></li>

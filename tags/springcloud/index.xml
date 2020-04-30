@@ -5,10 +5,22 @@
     <link>https://xxsvip.github.io/tags/springcloud/</link>
     <description>Recent content in springcloud on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Apr 2020 11:04:02 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 16:44:30 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/tags/springcloud/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gateway</title>
+      <link>https://xxsvip.github.io/springcloud/gateway/</link>
+      <pubDate>Thu, 30 Apr 2020 16:44:30 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/springcloud/gateway/</guid>
+      <description>网关作为流量入口，常用功能包括路由转发、权限校验、流量控制等。而springcloud gateway作为SpringCloud官方推出的第二代网关框架，取代了Zuul网关。
+ 添加依赖
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-gateway&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  在配置文件中配置gateway：
+spring: cloud: nacos: discovery: server-addr: 127.0.0.1:8848 namespace: e6eabd07-f4f1-437e-bea6-f7fb5235c6df gateway: routes: - id: erp_route uri: http://localhost:7000 predicates: - Query=url,erp - id: oa_route uri: http://localhost:8000 predicates: - Query=url,oa - id: baidu_route uri: https://www.baidu.com predicates: - Query=url,baidu   </description>
+    </item>
     
     <item>
       <title>Nacos配置中心</title>
@@ -47,7 +59,7 @@ file-extension为配置内容的数据格式，可以通过配置项spring.cloud
       <guid>https://xxsvip.github.io/springcloud/nacos%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</guid>
       <description> 引入dependencyManagement，后面引入Spring cloud alibaba相关的内容时不需要版本：
  &amp;lt;dependencyManagement&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-alibaba-dependencies&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.1.0.RELEASE&amp;lt;/version&amp;gt; &amp;lt;type&amp;gt;pom&amp;lt;/type&amp;gt; &amp;lt;scope&amp;gt;import&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;/dependencyManagement&amp;gt;   引入nacos discovery starter：
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-alibaba-nacos-discovery&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  在application.properties中配置nacos server地址：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba.cloud&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-cloud-starter-alibaba-nacos-discovery&amp;lt;/artifactId&amp;gt; &amp;lt;/dependency&amp;gt;  在application.properties中配置nacos server地址（还可以指定namespace）：
 spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848  在application.properties中配置nacos application name：
 spring.application.name=xxx  在springboot的启动类中添加注解：
 @EnableDiscoveryClient   Nacos Server  下载nacos server
