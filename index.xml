@@ -11,13 +11,22 @@
     
     
     <item>
-      <title>ssr</title>
-      <link>https://xxsvip.github.io/post/ssr/</link>
+      <title>ssr-android</title>
+      <link>https://xxsvip.github.io/wall/ssr-android/</link>
       <pubDate>Tue, 05 May 2020 21:04:05 +0800</pubDate>
       
-      <guid>https://xxsvip.github.io/post/ssr/</guid>
-      <description>Android Android下载链接
-windows windows下载链接</description>
+      <guid>https://xxsvip.github.io/wall/ssr-android/</guid>
+      <description>下载链接</description>
+    </item>
+    
+    <item>
+      <title>ssr-windows</title>
+      <link>https://xxsvip.github.io/wall/ssr-windows/</link>
+      <pubDate>Tue, 05 May 2020 21:04:05 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/wall/ssr-windows/</guid>
+      <description>下载链接
+此处填写订阅地址</description>
     </item>
     
     <item>
