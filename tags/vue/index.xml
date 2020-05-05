@@ -5,10 +5,24 @@
     <link>https://xxsvip.github.io/tags/vue/</link>
     <description>Recent content in vue on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Apr 2020 14:59:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 14:57:23 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vue模块化开发</title>
+      <link>https://xxsvip.github.io/front/vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 05 May 2020 14:57:23 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/front/vue%E6%A8%A1%E5%9D%97%E5%8C%96%E5%BC%80%E5%8F%91/</guid>
+      <description>npm install -g webpack  全局安装webpack
+ npm install -g @vue/cli-init  全局安装vue脚手架
+ 初始化vue项目  vue init webpack xxx；vue脚手架使用webpack模版初始化一个xxx项目。
+ 启动vue项目  项目的package.json中有scripts，代表我们能运行的命令。
+npm start = npm run dev 启动项目
+npm run build 将项目打包</description>
+    </item>
     
     <item>
       <title>VueX</title>

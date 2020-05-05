@@ -5,10 +5,19 @@
     <link>https://xxsvip.github.io/post/</link>
     <description>Recent content in Posts on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 08 Apr 2020 14:59:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 21:04:05 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ssr</title>
+      <link>https://xxsvip.github.io/post/ssr/</link>
+      <pubDate>Tue, 05 May 2020 21:04:05 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/post/ssr/</guid>
+      <description> Android </description>
+    </item>
     
     <item>
       <title>VueX</title>
