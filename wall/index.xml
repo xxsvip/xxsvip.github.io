@@ -5,10 +5,19 @@
     <link>https://xxsvip.github.io/wall/</link>
     <description>Recent content in Walls on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 05 May 2020 21:04:05 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2020 21:38:43 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/wall/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ssr Mac</title>
+      <link>https://xxsvip.github.io/wall/ssr-mac/</link>
+      <pubDate>Tue, 05 May 2020 21:38:43 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/wall/ssr-mac/</guid>
+      <description>下载地址</description>
+    </item>
     
     <item>
       <title>ssr-android</title>
@@ -25,8 +34,7 @@
       <pubDate>Tue, 05 May 2020 21:04:05 +0800</pubDate>
       
       <guid>https://xxsvip.github.io/wall/ssr-windows/</guid>
-      <description>下载链接
-此处填写订阅地址</description>
+      <description>下载链接</description>
     </item>
     
   </channel>
