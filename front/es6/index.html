@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Es6 // 小帅的技术小黑屋</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.59.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="smart man" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://xxsvip.github.io/css/main.min.f90f5edd436ec7b74ad05479a05705770306911f721193e7845948fb07fe1335.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Es6"/>
+<meta name="twitter:description" content="简介 ECMAScript6.0是JavaScript语言的下一代标准，已经在2015年6月正式发布，并且从ECMAScript6开始，采用年号来做版本。
+ECMAScript2016 ES7
+ECMAScript2017 ES8
+ECMAScript2018 ES9
+ECMAScript2019 ES10
+ECMAScript2020 ES11
+ECMAScript是浏览器脚本语言的规范，JavaScript是规范的具体实现。
+let var 声明的变量往往会越域
+let 声明的变量有严格局部作用域
+const声明常量（只读变量） 数组解构 let arr = [1,2,3] let [x,y,z] = arr console.log(x,y,z);  对象结构 const person = { name: &quot;jack&quot;, age: 21, language: [&#39;java&#39;,&#39;js&#39;,&#39;css&#39;] } let {name:abc,age,language} = person; console.log(abc,age,language);  字符串扩展 let str = &quot;hello.vue&quot;; console.log(str.startsWith(&quot;hello&quot;)); console.log(str.endsWith(&quot;vue&quot;)); console.log(str.includes(&quot;e&quot;)); console.log(str.includes(&quot;hello&quot;));  字符串模版 用反印号`来定义普通字符串或多行字符串
+let ss = ` &lt;div&gt; &lt;span&gt;hello world&lt;/span&gt; &lt;/div&gt; ` console."/>
+
+    <meta property="og:title" content="Es6" />
+<meta property="og:description" content="简介 ECMAScript6.0是JavaScript语言的下一代标准，已经在2015年6月正式发布，并且从ECMAScript6开始，采用年号来做版本。
+ECMAScript2016 ES7
+ECMAScript2017 ES8
+ECMAScript2018 ES9
+ECMAScript2019 ES10
+ECMAScript2020 ES11
+ECMAScript是浏览器脚本语言的规范，JavaScript是规范的具体实现。
+let var 声明的变量往往会越域
+let 声明的变量有严格局部作用域
+const声明常量（只读变量） 数组解构 let arr = [1,2,3] let [x,y,z] = arr console.log(x,y,z);  对象结构 const person = { name: &quot;jack&quot;, age: 21, language: [&#39;java&#39;,&#39;js&#39;,&#39;css&#39;] } let {name:abc,age,language} = person; console.log(abc,age,language);  字符串扩展 let str = &quot;hello.vue&quot;; console.log(str.startsWith(&quot;hello&quot;)); console.log(str.endsWith(&quot;vue&quot;)); console.log(str.includes(&quot;e&quot;)); console.log(str.includes(&quot;hello&quot;));  字符串模版 用反印号`来定义普通字符串或多行字符串
+let ss = ` &lt;div&gt; &lt;span&gt;hello world&lt;/span&gt; &lt;/div&gt; ` console." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xxsvip.github.io/front/es6/" />
+<meta property="article:published_time" content="2020-05-04T18:14:42+08:00" />
+<meta property="article:modified_time" content="2020-05-04T18:14:42+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://xxsvip.github.io"><img class="app-header-avatar" src="/avatar.jpg" alt="smart man" /></a>
+      <h1>小帅的技术小黑屋</h1>
+      <p>头发浓密｜睡眠良好｜情绪稳定｜财富自由</p>
+      <p><a href="/tags">标签</a></p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/xxsvip" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://twitter.com/ace_xingbenli" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-twitter">
+  <title>twitter</title>
+  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Es6</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 4, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://xxsvip.github.io/tags/es6/">es6</a></div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h3 id="简介">简介</h3>
+
+<p>ECMAScript6.0是JavaScript语言的下一代标准，已经在2015年6月正式发布，并且从ECMAScript6开始，采用年号来做版本。</p>
+
+<p>ECMAScript2016 ES7</p>
+
+<p>ECMAScript2017 ES8</p>
+
+<p>ECMAScript2018 ES9</p>
+
+<p>ECMAScript2019 ES10</p>
+
+<p>ECMAScript2020 ES11</p>
+
+<p><font color='red'>ECMAScript是浏览器脚本语言的规范，JavaScript是规范的具体实现。</font></p>
+
+<h3 id="let">let</h3>
+
+<p>var 声明的变量往往会越域</p>
+
+<p>let 声明的变量有严格局部作用域</p>
+
+<h3 id="const声明常量-只读变量">const声明常量（只读变量）</h3>
+
+<h3 id="数组解构">数组解构</h3>
+
+<pre><code>let arr = [1,2,3]
+let [x,y,z] = arr
+console.log(x,y,z);
+</code></pre>
+
+<h3 id="对象结构">对象结构</h3>
+
+<pre><code>const person = {
+	name: &quot;jack&quot;,
+	age: 21,
+	language: ['java','js','css']
+}
+let {name:abc,age,language} = person;
+console.log(abc,age,language);
+</code></pre>
+
+<h3 id="字符串扩展">字符串扩展</h3>
+
+<pre><code>let str = &quot;hello.vue&quot;;
+console.log(str.startsWith(&quot;hello&quot;));
+console.log(str.endsWith(&quot;vue&quot;));
+console.log(str.includes(&quot;e&quot;));
+console.log(str.includes(&quot;hello&quot;));
+</code></pre>
+
+<h3 id="字符串模版">字符串模版</h3>
+
+<p>用反印号`来定义普通字符串或多行字符串</p>
+
+<pre><code>let ss = `
+		&lt;div&gt;
+				&lt;span&gt;hello world&lt;/span&gt;
+		&lt;/div&gt;
+`
+console.log(ss); 
+</code></pre>
+
+<h3 id="字符串插入变量或表达式">字符串插入变量或表达式</h3>
+
+<pre><code>let info = '我是${name}，今年${age + 10}了'；
+console.log(info);
+</code></pre>
+
+<h3 id="函数优化">函数优化</h3>
+
+<ul>
+<li>函数参数默认值</li>
+</ul>
+
+<p>在es6之前，无法给一个函数参数设置默认值，只能采用变通写法</p>
+
+<pre><code>function add(a,b){
+	b =  b || 1;
+  return a + b;
+}
+console.log(add(10));
+</code></pre>
+
+<p>现在可以直接给参数写上默认值</p>
+
+<pre><code>function add2(a,b=1){
+	return a+b;
+}
+console.log(add2(10));
+</code></pre>
+
+<ul>
+<li>不定参数</li>
+</ul>
+
+<p>用来表示不确定参数个数。&hellip;参数名，由&hellip;加上一个具名参数标示符组成。具名参数只能放在参数列表的最后，并且有且只有一个不定参数。</p>
+
+<pre><code>function fun(...values){
+	console.log(values.length);
+}
+fun(1,2,3);
+</code></pre>
+
+<ul>
+<li><p>箭头函数</p>
+
+<pre><code>一个参数时：
+//以前声明方法
+var print = function(obj){
+	console.log(obj);
+}
+//现在可以这样写：
+var print = obj =&gt; console.log(obj);
+
+
+多个参数时：
+//以前声明方法：
+var sum = function(a,b){
+	return a+b;
+}
+//现在可以这样写：
+var sum = (a,b) =&gt; a+b;
+
+
+//代码不止一行时
+var sum = (a,b) =&gt; {
+	c = a + b;
+	return c + a;
+}
+
+</code></pre></li>
+</ul>
+
+<h3 id="对象优化">对象优化</h3>
+
+<ul>
+<li>keys(obj):获取对象的所有key形成的数组</li>
+<li>values(obj):获取对象的所有value形成的数组</li>
+<li>entries(obj):获取对象的所有key和value形成的二维数组。格式：[[k1,v1],[k2,v2]&hellip;.]</li>
+
+<li><p>assign(dest,&hellip;src):将多个src对象的值拷贝到dest中。</p>
+
+<pre><code>const person = {
+	name: 'jack',
+	age: 21,
+	language: ['java','js','css']
+}
+console.log(Object.keys(person));  //[&quot;name&quot;,&quot;age&quot;,&quot;language&quot;]
+console.log(Object.values(person)); //[&quot;jack&quot;,21,Array(3)]
+console.log(Object.entries(person));//[Array(2),Array(2),Array(2)]
+
+
+
+const target = {a:1};
+const source1 = {b:2};
+const source2 = {c:3};
+Object.assign(target,source1,source2);
+console.log(target); //{a:1,b:2,c:3}
+</code></pre></li>
+
+<li><p>声明对象简写</p>
+
+<pre><code>const age = 23;
+const name = &quot;zhangsan&quot;;
+//传统
+const person1 = {age:age,name:name};
+//es6属性名和属性变量名一样，可以省略
+const person2 = {age,name};
+</code></pre></li>
+</ul>
+
+<h3 id="map">map</h3>
+
+<pre><code>let  arr = [&quot;1&quot;,&quot;20&quot;,&quot;-5&quot;,&quot;3&quot;];
+//map()：接收一个函数，将原数组中所有元素用这个函数处理后放入新数组中返回
+arr.map( item =&gt; {
+	return item*2;
+});
+</code></pre>
+
+<h3 id="reduce">reduce</h3>
+
+<pre><code>//reduce():为数组中的每个元素依次执行回调函数，回用到上次执行的返回结果
+//语法： arr.reduce(callback,[initialValue]);
+//callback包含四个参数：
+//1.previousValue（上次调用回调函数返回的值，或者是提供的初始值initialValue）
+//2.currentValue（数组中当前被处理的元素）
+//3.index（当前元素在数组中的索引）
+//4.array（调用reduce的数组）
+let  arr = [&quot;1&quot;,&quot;20&quot;,&quot;-5&quot;,&quot;3&quot;];
+let result = arr.reduce((a,b) =&gt; {
+	console.log(&quot;上一次处理后&quot;+a);	//  1
+	console.log(&quot;当前正在处理&quot;+b);  //  20
+	return a+b;  
+});
+
+//指定初始值
+let result2 = arr.reduce((a,b) =&gt; {
+	console.log(&quot;上一次处理后&quot;+a);	//  100
+	console.log(&quot;当前正在处理&quot;+b);  //  1
+	return a+b;  
+},100);
+</code></pre>
+
+<h3 id="promise">Promise</h3>
+
+<p>一旦有一连串的ajax请求a,b,c,d&hellip;后面的请求依赖前面的请求的结果，就需要层层嵌套。这种缩进和层层嵌套的方式，非常容易造成上下文代码混乱。</p>
+
+<pre><code>let p1 = new Promise((resolve,reject) =&gt; {
+	 //ajax请求，success方法里面调用resolve(data),error方法里面调用reject(error);
+});
+let p2 = p1.then((obj) =&gt; {
+//then方法return一个new Promise方便后面继续进行调用
+	return new Promise((resolve,reject) =&gt; {
+	
+	});
+}).catch();
+</code></pre>
+
+<p>可以简单进行封装：</p>
+
+<pre><code>function get(url,data){
+	return new Promise((resolve,reject) =&gt; {
+		$.ajax({
+			url:url,
+			data:data,
+			success:function(data){
+				resolve(data);
+			},
+			error:function(err){
+				reject(err);
+			}
+		});
+	});
+}
+</code></pre>
+
+<h3 id="模块化">模块化</h3>
+
+<ul>
+<li>export命令用于规定模块的对外接口</li>
+<li>import命令用于导入其他模块提供的功能</li>
+</ul>
+
+<p>export不仅可以导出对象，一切js变量都可以导出。比如：基本类型变量、函数、数组、对象。</p>
+
+<pre><code>export {xxx,yyy,zzz}
+</code></pre>
+
+<p>export是什么名字，import就必须也是什么名字。</p>
+
+<p>可以使用export default{ }将js中所有对象导出，这样的话导入的时候就可以随意起名字了。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

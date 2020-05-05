@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>es6 on 小帅的技术小黑屋</title>
+    <link>https://xxsvip.github.io/tags/es6/</link>
+    <description>Recent content in es6 on 小帅的技术小黑屋</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 04 May 2020 18:14:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://xxsvip.github.io/tags/es6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Es6</title>
+      <link>https://xxsvip.github.io/front/es6/</link>
+      <pubDate>Mon, 04 May 2020 18:14:42 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/front/es6/</guid>
+      <description>简介 ECMAScript6.0是JavaScript语言的下一代标准，已经在2015年6月正式发布，并且从ECMAScript6开始，采用年号来做版本。
+ECMAScript2016 ES7
+ECMAScript2017 ES8
+ECMAScript2018 ES9
+ECMAScript2019 ES10
+ECMAScript2020 ES11
+ECMAScript是浏览器脚本语言的规范，JavaScript是规范的具体实现。
+let var 声明的变量往往会越域
+let 声明的变量有严格局部作用域
+const声明常量（只读变量） 数组解构 let arr = [1,2,3] let [x,y,z] = arr console.log(x,y,z);  对象结构 const person = { name: &amp;quot;jack&amp;quot;, age: 21, language: [&#39;java&#39;,&#39;js&#39;,&#39;css&#39;] } let {name:abc,age,language} = person; console.log(abc,age,language);  字符串扩展 let str = &amp;quot;hello.vue&amp;quot;; console.log(str.startsWith(&amp;quot;hello&amp;quot;)); console.log(str.endsWith(&amp;quot;vue&amp;quot;)); console.log(str.includes(&amp;quot;e&amp;quot;)); console.log(str.includes(&amp;quot;hello&amp;quot;));  字符串模版 用反印号`来定义普通字符串或多行字符串
+let ss = ` &amp;lt;div&amp;gt; &amp;lt;span&amp;gt;hello world&amp;lt;/span&amp;gt; &amp;lt;/div&amp;gt; ` console.</description>
+    </item>
+    
+  </channel>
+</rss>

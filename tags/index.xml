@@ -5,10 +5,19 @@
     <link>https://xxsvip.github.io/tags/</link>
     <description>Recent content in Tags on 小帅的技术小黑屋</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 30 Apr 2020 16:44:30 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 04 May 2020 18:14:42 +0800</lastBuildDate>
     
 	<atom:link href="https://xxsvip.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>es6</title>
+      <link>https://xxsvip.github.io/tags/es6/</link>
+      <pubDate>Mon, 04 May 2020 18:14:42 +0800</pubDate>
+      
+      <guid>https://xxsvip.github.io/tags/es6/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>springcloud</title>
